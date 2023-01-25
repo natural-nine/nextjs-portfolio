@@ -19,3 +19,19 @@ export interface ISkillTpyes {
 export interface ISkills {
   data: ISkillTpyes;
 }
+
+export interface IProjectsTypes {
+  name: string;
+  description: string;
+  imgPath: string;
+  deployedUrl: string;
+  githubUrl: string;
+  category: Category[];
+  keyTechs: string[];
+}
+
+export interface IProjects {
+  data: IProjectsTypes;
+}
+
+export type Category = "react" | "next";
