@@ -9,3 +9,13 @@ export interface IServiceTypes {
 export interface IServices {
   service: IServiceTypes;
 }
+
+export interface ISkillTpyes {
+  name: string;
+  level: string;
+  Icon: IconType;
+}
+
+export interface ISkills {
+  data: ISkillTpyes;
+}
