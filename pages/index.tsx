@@ -12,13 +12,13 @@ const Home = () => {
         아아아아아아아채어ㅏㅁㅇ러ㅣ라ㅣㅁㄴ어ㅏㅣㅁㅇㄴ럼ㅇㄹ나ㅣㅁㅇ러나ㅣㅁㄴㅇ럴아ㅣㅁ넘ㅇㄹ나ㅣㅁㅇㄴ렁라ㅣㅁ넘ㅇㄹ나ㅣㅁㅇ러남ㅇ리널아ㅣㅁㅇㄹ너ㅏㅣ;
       </h5>
       <div
-        className="flex-grow p-4 mt-5 bg-gray-400"
+        className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100"
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
         <h6 className="my-3 text-xl font-bold tracking-wide">dkdkdkdkdkd</h6>
         <div className="grid gap-4 lg:grid-cols-2">
           {services.map((service: IServiceTypes) => (
-            <div className="bg-gray-200 rounded-lg lg:col-span-1">
+            <div className="bg-gray-200 rounded-lg dark:bg-dark-200 lg:col-span-1">
               <ServiceCard service={service} />
             </div>
           ))}
