@@ -14,7 +14,7 @@ const NavItems = ({ activeItem, setActiveItem, route, name }: INavTypes) => {
       {activeItem !== name && (
         <Link href={route}>
           <span 
-          className="hover:text-green-200"
+          className="hover:text-green-500"
             onClick={() => {
               setActiveItem(name);
             }}

@@ -109,7 +109,7 @@ a {
 @tailwind components;
 @tailwind utilities;
 body {
-  background-color: black;
+  /* background-color: black; */
   font-family: sans-serif;
   color: #354358;
 }

@@ -3,11 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 import { projects } from '@/data'
 import { IconType } from 'react-icons';
-interface IServiceTypes {
-  title: string;
-  about: string;
-  Icon: IconType;
-}
+
 type Data = {
   name: string
 }

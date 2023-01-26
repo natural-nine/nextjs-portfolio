@@ -1,6 +1,6 @@
 import ProjectCard from "@/components/ProjectCard";
 import ProjectNavBar from "@/components/ProjectNavBar";
-import { projects } from "@/data";
+// import { projects } from "@/data";
 import { Category, IProjectsTypes } from "@/types";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -9,21 +9,20 @@ import { GetStaticProps } from "next";
 import axios from "axios";
 
 interface IPro {
-  projects: IProjectsTypes;
+  projects: IProjectsTypes[];
 }
 
-const Projects = () => {
-  // console.log(projects.projects);
-  const [project, setProject] = useState(projects);
+const Projects = ({ projects }: { projects: IPro }) => {
+  const [project, setProject] = useState(projects.projects);
   const [active, setActive] = useState("all");
   const [showDetail, setShowDetail] = useState<number | null>(null);
   const filterCategory = (category: Category | "all") => {
     if (category === "all") {
-      setProject(projects);
+      setProject(projects.projects);
       setActive(category);
       return;
     }
-    const newArray = projects.filter((project:IProjectsTypes) =>
+    const newArray = projects.projects.filter((project: IProjectsTypes) =>
       project.category.includes(category)
     );
     setProject(newArray);
@@ -66,7 +65,6 @@ const Projects = () => {
 
 export const getStaticProps = async (context: GetStaticProps) => {
   const { data } = await axios.get("http://localhost:3000/api/projects");
-  // console.log(data);
   return {
     props: {
       projects: data,

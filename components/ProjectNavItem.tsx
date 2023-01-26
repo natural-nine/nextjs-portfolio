@@ -9,7 +9,7 @@ const ProjectNavItem = ({
   filterCategory: (category: Category | "all") => void;
   active: string;
 }) => {
-  let className = "capitalize cursor-pointer hover:text-green-300";
+  let className = "capitalize cursor-pointer hover:text-green-500";
   if (active === value) className += " text-green-300";
   return (
     <li onClick={() => filterCategory(value)} className={className}>

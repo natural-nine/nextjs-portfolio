@@ -1,12 +1,11 @@
 import { IProjects } from "@/types";
 import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaRocket } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 import { stagger, variants } from "@/animation";
 
 const ProjectCard = ({ data, setShowDetail, showDetail }: IProjects) => {
-
   return (
     <div>
       <Image
@@ -45,12 +44,14 @@ const ProjectCard = ({ data, setShowDetail, showDetail }: IProjects) => {
               >
                 <FaGithub /> <span>Github</span>
               </a>
-              <a
-                href={data.deployedUrl}
-                className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-dark-500"
-              >
-                <FaGithub /> <span>Project</span>
-              </a>
+              {data.deployedUrl !== "" && (
+                <a
+                  href={data.deployedUrl}
+                  className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-dark-500"
+                >
+                  <FaRocket /> <span>Project</span>
+                </a>
+              )}
             </motion.div>
           </motion.div>
 

@@ -1,4 +1,4 @@
-import { IServices, IServiceTypes } from "@/types";
+import { IServices } from "@/types";
 
 const ServiceCard = ({ service }: IServices) => {
   const { Icon, about, title } = service;

@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import { IconType } from "react-icons";
 
 export interface IServiceTypes {
+  id: number;
   title: string;
   about: string;
   Icon: IconType;
@@ -14,7 +15,7 @@ export interface IServices {
 export interface ISkillTpyes {
   name: string;
   level: string;
-  Icon: IconType;
+  Icon: IconType | string;
 }
 
 export interface ISkills {

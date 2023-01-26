@@ -11,19 +11,18 @@ const resume = () => {
         <motion.div variants={variants} initial="initial" animate="animate">
           <h5 className="my-3 text-2xl font-bold">교육</h5>
           <div>
-            <h5 className="my-2 text-xl font-bold">부캠</h5>
-            <p className="font-semibold">dkdkdkdksksk</p>
+            <h5 className="my-2 text-xl font-bold">스파르타코딩클럽 항해99 </h5>
+            <p className="font-semibold">22.05 ~ 22.08</p>
             <p className="my-3 ">
-              I am currently pursuing B.tech in Computer Science Engineering
-              from Academy of Technology
+              항해99 프로그램에서 프론트엔드 (React) 코스를 수료했으며, 프론트엔드 개발자로 성장하고 있습니다.
             </p>
           </div>
         </motion.div>
         <motion.div variants={variants} initial="initial" animate="animate">
-          <h5 className="my-3 text-2xl font-bold">최종학력</h5>
+          <h5 className="my-3 text-2xl font-bold">경력사항</h5>
           <div>
-            <h5 className="my-2 text-xl font-bold">대학교 14.03 ~ 18.08</h5>
-            <p className="font-semibold">전공:</p>
+            <h5 className="my-2 text-xl font-bold"></h5>
+            <p className="font-semibold"></p>
           </div>
         </motion.div>
       </div>

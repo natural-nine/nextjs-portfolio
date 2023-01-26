@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { useState } from "react";
 import NavItems from "./NavItems";
 
@@ -7,7 +6,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between px-5 py-3 my-3">
-      <span className="text-xl font-bold border-b-4 md:text-2xl">
+      <span className="text-xl font-bold border-b-4 border-green-500 md:text-2xl'">
         {activeItem}
       </span>
       <div className="flex space-x-5 text-lg">
