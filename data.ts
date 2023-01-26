@@ -19,7 +19,7 @@ export const services: IServiceTypes[] = [
 ];
 
 export const languages: ISkillTpyes[] = [
-  { name: "Javascript", level: "85%", Icon: "ddd" },
+  { name: "Javascript", level: "85%", Icon: FaCircle },
   { name: "Typescript", level: "85%", Icon: FaCircle },
   { name: "React.Js", level: "85%", Icon: FaCircle },
   { name: "Next.Js", level: "70%", Icon: FaCircle },
