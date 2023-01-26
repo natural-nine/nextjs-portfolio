@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import { FaGithub, FaMapMarkerAlt, FaFileDownload } from "react-icons/fa";
 
 const Sider = () => {
@@ -10,11 +11,18 @@ const Sider = () => {
   console.log(theme);
   return (
     <div>
-      <img
+      <Image
+        src="/song.webp"
+        width="128"
+        height="128"
+        alt="avatar"
+        className="mx-auto rounded-full"
+      />
+      {/* <img
         src="/song.webp"
         alt="avatar"
         className="w-32 h-32 mx-auto rounded-full"
-      />
+      /> */}
       <h3 className="my-5 text-3xl font-medium tracking-wider">
         <span>송완준</span>
       </h3>

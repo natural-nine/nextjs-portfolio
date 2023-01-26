@@ -3,8 +3,26 @@ import { services } from "@/data";
 import { IServiceTypes } from "@/types";
 import axios from "axios";
 import { GetServerSideProps } from "next";
-
+import { motion } from "framer-motion";
 const Home = () => {
+  const variants = {
+    initial: {
+      opacity: 0,
+      y: 60,
+    },
+    animate: {
+      opacity: 1,
+      y: 1,
+    },
+  };
+  const stagger = {
+    initial: {},
+    animate: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
   return (
     <div className="flex flex-col flex-grow px-6 pt-1">
       <h5 className="my-3 font-medium">
@@ -16,13 +34,21 @@ const Home = () => {
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
         <h6 className="my-3 text-xl font-bold tracking-wide">dkdkdkdkdkd</h6>
-        <div className="grid gap-4 lg:grid-cols-2">
+        <motion.div
+          className="grid gap-4 lg:grid-cols-2"
+          variants={stagger}
+          initial="initial"
+          animate="animate"
+        >
           {services.map((service: IServiceTypes) => (
-            <div className="bg-gray-200 rounded-lg dark:bg-dark-200 lg:col-span-1">
+            <motion.div
+              variants={variants}
+              className="bg-gray-200 rounded-lg dark:bg-dark-200 lg:col-span-1"
+            >
               <ServiceCard service={service} />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
