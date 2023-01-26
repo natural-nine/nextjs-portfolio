@@ -47,6 +47,7 @@ export const tools: ISkillTpyes[] = [
 
 export const projects: IProjectsTypes[] = [
   {
+    id:1,
     name: "멘도롱제주",
     description: "블라브라라라라라라랄라블라블 바르응 바라아앋 브브브아아아아",
     imgPath: "/images/Frame-280.webp",
@@ -64,6 +65,7 @@ export const projects: IProjectsTypes[] = [
     ],
   },
   {
+    id:2,
     name: "원티드 프리온보딩 Todo-List",
     description: "블라브라라라라라라랄라블라블 바르응 바라아앋 브브브아아아아",
     imgPath: "/images/todo.webp",
@@ -74,6 +76,7 @@ export const projects: IProjectsTypes[] = [
     keyTechs: ["Typescript", "React", "Styled-Components"],
   },
   {
+    id:3,
     name: "Github-Searcher",
     description: "블라브라라라라라라랄라블라블 바르응 바라아앋 브브브아아아아",
     imgPath: "/images/searcher.webp",
@@ -89,6 +92,7 @@ export const projects: IProjectsTypes[] = [
     ],
   },
   {
+    id:4,
     name: "My-Portfolio",
     description: "블라브라라라라라라랄라블라블 바르응 바라아앋 브브브아아아아",
     imgPath: "/images/portfolio.webp",
@@ -98,24 +102,27 @@ export const projects: IProjectsTypes[] = [
     keyTechs: ["Typescript", "Next.js", "Tailwind css"],
   },
   {
-    name: "My-Portfolio",
+    id:5,
+    name: "Countries-List",
     description: "블라브라라라라라라랄라블라블 바르응 바라아앋 브브브아아아아",
     imgPath: "/images/portfolio.webp",
     deployedUrl: "",
-    githubUrl: "https://github.com/natural-nine/nextjs-portfolio",
+    githubUrl: "https://github.com/natural-nine/nextjs-practise",
     category: ["next"],
-    keyTechs: ["Typescript", "Next.js", "Tailwind css"],
+    keyTechs: ["Typescript", "Next.js", "Styled-components"],
   },
   {
-    name: "My-Portfolio",
-    description: "블라브라라라라라라랄라블라블 바르응 바라아앋 브브브아아아아",
+    id:6,
+    name: "개인 블로그",
+    description: "현재 개발 중...",
     imgPath: "/images/portfolio.webp",
     deployedUrl: "",
-    githubUrl: "https://github.com/natural-nine/nextjs-portfolio",
+    githubUrl: "https://github.com/natural-nine/nextjs-personal-blog",
     category: ["next"],
-    keyTechs: ["Typescript", "Next.js", "Tailwind css"],
+    keyTechs: ["Typescript", "Next.js"],
   },
   {
+    id:7,
     name: "My-Portfolio",
     description: "블라브라라라라라라랄라블라블 바르응 바라아앋 브브브아아아아",
     imgPath: "/images/portfolio.webp",

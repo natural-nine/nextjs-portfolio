@@ -1,20 +1,12 @@
+import { routeAni, variants } from "@/animation";
 import ResumeBar from "@/components/ResumeBar";
 import { languages, tools } from "@/data";
 import { ISkillTpyes } from "@/types";
 import { motion } from "framer-motion";
+
 const resume = () => {
-  const variants = {
-    initial: {
-      opcity: 0,
-      y: 60,
-    },
-    animate: {
-      opcity: 1,
-      y: 1,
-    },
-  };
   return (
-    <div className="px-6 py-2">
+    <motion.div variants={routeAni} initial="initial" animate="animate" exit="exit" className="px-6 py-2">
       <div className="grid gap-6 md:grid-cols-2">
         <motion.div variants={variants} initial="initial" animate="animate">
           <h5 className="my-3 text-2xl font-bold">교육</h5>
@@ -53,8 +45,10 @@ const resume = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
+
+
 
 export default resume;

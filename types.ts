@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react";
 import { IconType } from "react-icons";
 
 export interface IServiceTypes {
@@ -21,6 +22,7 @@ export interface ISkills {
 }
 
 export interface IProjectsTypes {
+  id: number;
   name: string;
   description: string;
   imgPath: string;
@@ -32,6 +34,8 @@ export interface IProjectsTypes {
 
 export interface IProjects {
   data: IProjectsTypes;
+  showDetail: number | null;
+  setShowDetail: Dispatch<SetStateAction<number | null>>;
 }
 
 export type Category = "react" | "next";

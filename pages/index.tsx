@@ -4,27 +4,16 @@ import { IServiceTypes } from "@/types";
 import axios from "axios";
 import { GetServerSideProps } from "next";
 import { motion } from "framer-motion";
+import { routeAni, stagger, variants } from "@/animation";
 const Home = () => {
-  const variants = {
-    initial: {
-      opacity: 0,
-      y: 60,
-    },
-    animate: {
-      opacity: 1,
-      y: 1,
-    },
-  };
-  const stagger = {
-    initial: {},
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
   return (
-    <div className="flex flex-col flex-grow px-6 pt-1">
+    <motion.div
+      className="flex flex-col flex-grow px-6 pt-1"
+      variants={routeAni}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <h5 className="my-3 font-medium">
         아아아아아아아채어ㅏㅁㅇ러ㅣ라ㅣㅁㄴ어ㅏㅣㅁㅇㄴ럼ㅇㄹ나ㅣㅁㅇ러나ㅣㅁㄴㅇ럴아ㅣㅁ넘ㅇㄹ나ㅣㅁㅇㄴ렁라ㅣㅁ넘ㅇㄹ나ㅣㅁㅇ러남ㅇ리널아ㅣㅁㅇㄹ너ㅏㅣ;
         아아아아아아아채어ㅏㅁㅇ러ㅣ라ㅣㅁㄴ어ㅏㅣㅁㅇㄴ럼ㅇㄹ나ㅣㅁㅇ러나ㅣㅁㄴㅇ럴아ㅣㅁ넘ㅇㄹ나ㅣㅁㅇㄴ렁라ㅣㅁ넘ㅇㄹ나ㅣㅁㅇ러남ㅇ리널아ㅣㅁㅇㄹ너ㅏㅣ;
@@ -50,7 +39,7 @@ const Home = () => {
           ))}
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
