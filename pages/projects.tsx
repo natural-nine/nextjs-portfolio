@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { routeAni, stagger } from "@/animation";
 import { GetStaticProps } from "next";
 import axios from "axios";
+import Head from "next/head";
 
 interface IPro {
   projects: IProjectsTypes[];
@@ -29,6 +30,14 @@ const Projects = ({ projects }: { projects: IPro }) => {
     setActive(category);
   };
   return (
+    <>
+    <Head>
+        <title>All-projects</title>
+        <meta
+          name="description"
+          content="song's projects"
+        />
+      </Head>
     <motion.div
       variants={routeAni}
       initial="initial"
@@ -60,6 +69,7 @@ const Projects = ({ projects }: { projects: IPro }) => {
         ))}
       </motion.div>
     </motion.div>
+    </>
   );
 };
 
