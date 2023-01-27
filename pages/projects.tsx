@@ -1,29 +1,28 @@
 import ProjectCard from "@/components/ProjectCard";
 import ProjectNavBar from "@/components/ProjectNavBar";
-// import { projects } from "@/data";
+import { projects } from "@/data";
 import { Category, IProjectsTypes } from "@/types";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { routeAni, stagger } from "@/animation";
-import { GetStaticProps } from "next";
-import axios from "axios";
+// import axios from "axios";
 import Head from "next/head";
 
-interface IPro {
-  projects: IProjectsTypes[];
-}
+// interface IPro {
+//   projects: IProjectsTypes[];
+// }
 
-const Projects = ({ projects }: { projects: IPro }) => {
-  const [project, setProject] = useState(projects.projects);
+const Projects = () => {
+  const [project, setProject] = useState(projects);
   const [active, setActive] = useState("all");
   const [showDetail, setShowDetail] = useState<number | null>(null);
   const filterCategory = (category: Category | "all") => {
     if (category === "all") {
-      setProject(projects.projects);
+      setProject(projects);
       setActive(category);
       return;
     }
-    const newArray = projects.projects.filter((project: IProjectsTypes) =>
+    const newArray = projects.filter((project: IProjectsTypes) =>
       project.category.includes(category)
     );
     setProject(newArray);
@@ -73,13 +72,13 @@ const Projects = ({ projects }: { projects: IPro }) => {
   );
 };
 
-export const getStaticProps = async (context: GetStaticProps) => {
-  const { data } = await axios.get("http://localhost:3000/api/projects");
-  return {
-    props: {
-      projects: data,
-    },
-  };
-};
+// export const getStaticProps = async () => {
+//   const { data } = await axios.get("http://localhost:3000/api/projects");
+//   return {
+//     props: {
+//       projects: data,
+//     },
+//   };
+// };
 
 export default Projects;

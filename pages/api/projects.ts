@@ -2,11 +2,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 import { projects } from '@/data'
-import { IconType } from 'react-icons';
 
-type Data = {
-  name: string
-}
+
+
 
 export default function handler(
   req: NextApiRequest,
