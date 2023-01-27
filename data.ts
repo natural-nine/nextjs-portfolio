@@ -100,7 +100,7 @@ export const projects: IProjectsTypes[] = [
     description:
       "next.js로 만든 개인 포트폴리오 웹사이트 입니다. typescript 와 tailwind css 를 사용하여 구현했습니다.",
     imgPath: "/images/my.webp",
-    deployedUrl: "",
+    deployedUrl: "https://nextjs-portfolio-d6hnp164d-natural-nine.vercel.app",
     githubUrl: "https://github.com/natural-nine/nextjs-portfolio",
     category: ["next"],
     keyTechs: ["Typescript", "Next.js", "Tailwind css"],
