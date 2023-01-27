@@ -5,7 +5,7 @@ import { ISkillTpyes } from "@/types";
 import { motion } from "framer-motion";
 import Head from "next/head";
 
-const resume = () => {
+const Resume = () => {
   return (
     <>
       <Head>
@@ -64,4 +64,4 @@ const resume = () => {
   );
 };
 
-export default resume;
+export default Resume;
