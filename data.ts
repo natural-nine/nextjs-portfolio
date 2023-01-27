@@ -1,4 +1,3 @@
-import { IconType } from "react-icons";
 import { FaDesktop, FaCircle, FaHandshake } from "react-icons/fa";
 import { IProjectsTypes, IServiceTypes, ISkillTpyes } from "./types";
 
